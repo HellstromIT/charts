@@ -51,7 +51,7 @@ graphite:
   mapping: |-
     # Add custom graphite mappings here: https://github.com/prometheus/graphite_exporter#metric-mapping-and-configuration
     mappings:
-    - match: 'servers_(.*)_interface_([a-z0-9]+)_(.*)'
+    - match: 'servers\.(.*)\.interface\.([a-z0-9]+)\.(.*)'
       match_type: regex
       name: 'servers_interface_${3}'
       labels:
