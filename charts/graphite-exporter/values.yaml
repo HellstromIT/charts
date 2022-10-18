@@ -75,7 +75,7 @@ graphite:
       labels:
         hostname: ${1}
         disk: ${2}
-    - match: 'servers\.(.*)\.df\.([a-z0-9]+)\.(df\..*)'
+    - match: 'servers\.(.*)\.df\.(.*)\.(df\..*)'
       match_type: regex
       name: 'servers_${3}'
       labels:
