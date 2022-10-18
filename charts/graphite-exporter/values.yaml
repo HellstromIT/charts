@@ -57,6 +57,12 @@ graphite:
       labels:
         hostname: ${1}
         device: ${2}
+    - match: 'servers\.(.*)\.cpu\.([0-9]+)\.(.*)'
+      match_type: regex
+      name: 'servers_${3}'
+      labels:
+        hostname: ${1}
+        core: ${2}
     - match: 'servers\.(.*)\.aggregation\.(.*)'
       match_type: regex
       name: 'servers_aggregation_${2}'
