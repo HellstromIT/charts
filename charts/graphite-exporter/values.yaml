@@ -71,7 +71,7 @@ graphite:
         disk: ${2}
     - match: 'servers\.(.*)\.(aggregation|nfsstat|memory|load|processes)\.(.*)'
       match_type: regex
-      name: 'servers_$(2)_$(3}'
+      name: 'servers_${2}_${3}'
       labels:
         hostname: ${1}
 
