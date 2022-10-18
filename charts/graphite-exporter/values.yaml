@@ -81,7 +81,7 @@ graphite:
       labels:
         hostname: ${1}
         dataset: ${2}
-    - match: 'servers\.(.*)\\.(aggregation|nfsstat|memory|load|processes|zfs_arc|rrdcached)\\.(.*)'
+    - match: 'servers\.(.*?)\.(aggregation|nfsstat|memory|load|processes|zfs_arc|rrdcached)\.(.*)'
       match_type: regex
       name: 'servers_${2}_${3}'
       labels:
