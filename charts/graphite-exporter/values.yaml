@@ -57,6 +57,11 @@ graphite:
       labels:
         hostname: ${1}
         device: ${2}
+    - match: 'servers\.(.*)\.aggregation\.(.*)'
+      match_type: regex
+      name: 'servers_aggregation_${2}'
+      labels:
+        hostname: ${1}
 
 # Enable this if you have the Prometheus Operator, to create a ServiceMonitor
 # resource so Prometheus will scrape this endpoint
